@@ -1,0 +1,5 @@
+enum Anhuai_user_grpc_Status {
+  ENABLED
+  DISABLED
+  DELETED
+}

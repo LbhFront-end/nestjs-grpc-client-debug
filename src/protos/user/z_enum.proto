@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package anhuai.user.grpc;
+
+option java_multiple_files = true;
+option java_package = "anhuai.user.grpc.lib";
+option java_outer_classname = "EnumProto";
+
+
+    /**
+     * 状态
+     */
+    enum Status {
+        /**
+         * 已启用
+         */
+        ENABLED = 0;
+        /**
+         * 已停用
+         */
+        DISABLED = 1;
+        /**
+         * 已删除
+         */
+        DELETED = 2;
+    }

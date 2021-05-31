@@ -1,0 +1,67 @@
+type Anhuai_user_grpc_UserLoginLogIdentifier {
+  id: Int
+}
+type Anhuai_user_grpc_UserLoginLogItem {
+  id: Int
+  accountId: Int
+  loginDate: Google_protobuf_Timestamp
+  loginIp: String
+  region: String
+}
+type Anhuai_user_grpc_UserLoginLogForm {
+  accountId: Int
+  loginDate: Google_protobuf_Timestamp
+  loginIp: String
+  region: String
+  id: Int
+}
+type Anhuai_user_grpc_UserLoginLogsQuery {
+  page: Int
+  size: Int
+  sort: [String_Boolean_map]
+}
+type String_Boolean_map {
+  key: String
+  value: Boolean
+}
+type Anhuai_user_grpc_UserLoginLogItems {
+  page: Int
+  size: Int
+  items: [Anhuai_user_grpc_UserLoginLogItem]
+}
+enum Anhuai_user_grpc_Status {
+  ENABLED
+  DISABLED
+  DELETED
+}
+type Google_protobuf_Timestamp {
+  seconds: Int
+  nanos: Int
+}
+type Google_protobuf_DoubleValue {
+  value: Float
+}
+type Google_protobuf_FloatValue {
+  value: Float
+}
+type Google_protobuf_Int64Value {
+  value: Int
+}
+type Google_protobuf_UInt64Value {
+  value: Int
+}
+type Google_protobuf_Int32Value {
+  value: Int
+}
+type Google_protobuf_UInt32Value {
+  value: Int
+}
+type Google_protobuf_BoolValue {
+  value: Boolean
+}
+type Google_protobuf_StringValue {
+  value: String
+}
+type Google_protobuf_BytesValue {
+  value: String
+}

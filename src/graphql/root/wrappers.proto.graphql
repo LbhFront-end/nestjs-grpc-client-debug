@@ -1,0 +1,27 @@
+type Google_protobuf_DoubleValue {
+  value: Float
+}
+type Google_protobuf_FloatValue {
+  value: Float
+}
+type Google_protobuf_Int64Value {
+  value: Int
+}
+type Google_protobuf_UInt64Value {
+  value: Int
+}
+type Google_protobuf_Int32Value {
+  value: Int
+}
+type Google_protobuf_UInt32Value {
+  value: Int
+}
+type Google_protobuf_BoolValue {
+  value: Boolean
+}
+type Google_protobuf_StringValue {
+  value: String
+}
+type Google_protobuf_BytesValue {
+  value: String
+}

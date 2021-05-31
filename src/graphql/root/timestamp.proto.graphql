@@ -1,0 +1,4 @@
+type Google_protobuf_Timestamp {
+  seconds: Int
+  nanos: Int
+}

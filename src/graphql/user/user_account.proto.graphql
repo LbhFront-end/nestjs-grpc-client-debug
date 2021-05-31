@@ -1,0 +1,153 @@
+scalar DateTime
+
+type Anhuai_user_grpc_UserAccountIdentifier {
+  id: Int
+}
+type Anhuai_user_grpc_UserAccountItem {
+  id: Int
+  account: String
+  password: String
+  nickname: String
+  imageUrl: String
+  sex: Int
+  birthday: DateTime
+  cellphone: String
+  email: String
+  groupType: String
+  groupId: Int
+  insDate: DateTime
+  status: Anhuai_user_grpc_Status
+  wxUnionid: String
+}
+type Anhuai_user_grpc_UserAccountForm {
+  account: String
+  password: String
+  nickname: String
+  imageUrl: String
+  sex: Int
+  birthday: DateTime
+  cellphone: String
+  email: String
+  groupType: String
+  groupId: Int
+  wxUnionid: String
+  status: Anhuai_user_grpc_Status
+  id: Int
+}
+type Anhuai_user_grpc_UserAccountsQuery {
+  page: Int
+  size: Int
+  sort: [String_Boolean_map]
+}
+type String_Boolean_map {
+  key: String
+  value: Boolean
+}
+
+type Anhuai_user_grpc_UserAccountItems {
+  page: Int
+  size: Int
+  items: [Anhuai_user_grpc_UserAccountItem]
+}
+enum Anhuai_user_grpc_Status {
+  ENABLED
+  DISABLED
+  DELETED
+}
+type Google_protobuf_Timestamp {
+  seconds: Int
+  nanos: Int
+}
+type Google_protobuf_DoubleValue {
+  value: Float
+}
+type Google_protobuf_FloatValue {
+  value: Float
+}
+type Google_protobuf_Int64Value {
+  value: Int
+}
+type Google_protobuf_UInt64Value {
+  value: Int
+}
+type Google_protobuf_Int32Value {
+  value: Int
+}
+type Google_protobuf_UInt32Value {
+  value: Int
+}
+type Google_protobuf_BoolValue {
+  value: Boolean
+}
+type Google_protobuf_StringValue {
+  value: String
+}
+type Google_protobuf_BytesValue {
+  value: String
+}
+
+input SortType {
+  key: String
+  value: Boolean
+}
+
+input Anhuai_user_grpc_UserAccountFormInsertInput {
+  account: String
+  password: String
+  nickname: String
+  imageUrl: String
+  sex: Int
+  birthday: DateTime
+  cellphone: String
+  email: String
+  groupType: String
+  groupId: Int
+  wxUnionid: String
+  status: Anhuai_user_grpc_Status
+  id: Int
+}
+
+input Anhuai_user_grpc_UserAccountFormUpdateInput {
+  account: String
+  password: String
+  nickname: String
+  imageUrl: String
+  sex: Int
+  birthday: DateTime
+  cellphone: String
+  email: String
+  groupType: String
+  groupId: Int
+  wxUnionid: String
+  status: Anhuai_user_grpc_Status
+  id: Int!
+}
+
+input Anhuai_user_grpc_UserAccountFormDeleteInput {
+  id: Int
+}
+
+input Anhuai_user_grpc_UserAccountsQueryInput {
+  page: Int
+  size: Int
+  sort: [SortType]
+}
+
+type Query {
+  account(id: ID!): Anhuai_user_grpc_UserAccountItem
+  accounts(
+    query: Anhuai_user_grpc_UserAccountsQueryInput
+  ): Anhuai_user_grpc_UserAccountItems
+}
+
+type Mutation {
+  insertAccount(
+    input: Anhuai_user_grpc_UserAccountFormInsertInput
+  ): Anhuai_user_grpc_UserAccountIdentifier
+  updateAccount(
+    input: Anhuai_user_grpc_UserAccountFormUpdateInput
+  ): Anhuai_user_grpc_UserAccountIdentifier
+  deleteAccount(
+    input: Anhuai_user_grpc_UserAccountFormDeleteInput
+  ): Google_protobuf_Int32Value
+}
